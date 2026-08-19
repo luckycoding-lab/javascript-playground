@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--f3-font);
+    user-select: none;
+    color: #000000;
+}
+:root {
+    --main-bg: #eb5e28;
+    --first: #2A2F2E;
+    --second: #2E3E30;
+    --thrird: #7F725D;
+    --fourth: #B3BCB2;
+    --gen-pad: 10px 20px;
+    --f1-font: "Roboto", sans-serif;
+    --f2-font: "Lato", sans-serif;
+    --f3-font: "Poppins", sans-serif;
+}
+body {
+    background: url('https://cdn.pixabay.com/photo/2024/04/12/08/22/background-8691370_1280.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: center;
+}
+h2 {
+    margin-top: 20px;
+    color: black;
+}
+.content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+}
+button {
+    padding: 10px 120px;
+    border-radius: 5px;
+    background: var(--first);
+    color: white;
+    font-family: 700;
+    font-size: 20px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.launch-time {
+    display: flex;
+    /* font-display: column; */
+    text-align: center;
+    padding: 15px 0;
+}
+.launch-time div {
+    flex-basis: 100px;
+    padding-right: 15px;
+}
+.launch-time div p {
+    font-size: 60px;
+    margin-bottom: -14px;
+}
+.bird-container {
+    position: absolute;
+    top: 70%; /* Start at a certain height in the viewport */
+    left: -100px; /* Initially off-screen */
+    animation: flyAcrossWindow 5s ease-in-out infinite, flyUpAndDown 3s ease-in-out infinite; 
+}
+.bird {
+    width: 50px; /* Adjust the bird's size */
+    transform-origin: center; /* Pivot point for flapping wings */
+    animation: flapWings 1s ease-in-out infinite;
+}
+
+@keyframes flyAcrossWindow {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(105vw);
+    }
+    
+}
+@keyframes flapWings {
+    0% { transform: scaleY(1); }
+    50% { transform: scaleY(0.9); } /* Simulate flapping by shrinking vertically */
+    100% { transform: scaleY(1); }
+}
+
+@media only screen and (max-width: 600px) {
+    span {
+        font-size: 12px;
+    }
+    h1 {
+        font-size: 25px;
+    }
+    button {
+        font-size: 15px;
+        padding: 10px 80px;
+    }
+    
+    @keyframes flyAcrossWindow {
+        to {
+            transform: translateX(150vw);
+        }
+    }
+    .bird-container {
+        top: 40%;
+    }
+}

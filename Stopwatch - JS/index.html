@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="shortcut icon" href="https://img.icons8.com/ios/50/stopwatch.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stopwatch">
+        <h1 id="displayTime">00:00:00</h1>
+        <div class="buttons">
+            <img onclick="watchStop()" src="https://img.icons8.com/glyph-neue/64/stop.png">
+            <img onclick="watchStart()" id="playpause" src="https://img.icons8.com/ios-glyphs/64/play--v1.png">
+            <img onclick="watchReset()" src="https://img.icons8.com/ios-filled/100/restart--v1.png">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

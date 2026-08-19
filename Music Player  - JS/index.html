@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="shortcut icon" href="https://img.icons8.com/material/24/apple-music.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- icon bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head> 
+<body>
+    <div class="container">
+        <div class="music-player">
+            <nav>
+                <div class="circel">
+                    <svg width="20" height="20" fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m10.757 11.996 4.95 4.95a1 1 0 1 1-1.414 1.414l-5.657-5.657a1 1 0 0 1 0-1.414l5.657-5.657a1 1 0 0 1 1.414 1.414l-4.95 4.95Z"></path>
+                      </svg>
+                    </div>
+                    <div class="circel">
+                    <svg width="20" height="20" fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 7h5a1 1 0 1 1 0 2H6a1 1 0 0 1 0-2Zm7 8h5a1 1 0 0 1 0 2h-5a1 1 0 0 1 0-2Zm-7-4h12a1 1 0 0 1 0 2H6a1 1 0 0 1 0-2Z"></path>
+                    </svg>
+                </div>
+            </nav>
+            <img src="music/thumb (2).png" class="song-img">
+            <h1>No Lo Trates</h1>
+            <p>Pitbull x Daddy Yankee x Natti Natasha</p>
+            <audio id="song">
+                <source src="music/Pitbull x Daddy Yankee x Natti Natasha - No Lo Trates (Video Oficial).mp3" type="audio/mp3">
+            </audio>
+            <input type="range" value="0" id="progress">
+            <div class="controls">
+                <div>
+                    <svg width="26" height="26" fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m10.757 11.996 4.95 4.95a1 1 0 1 1-1.414 1.414l-5.657-5.657a1 1 0 0 1 0-1.414l5.657-5.657a1 1 0 0 1 1.414 1.414l-4.95 4.95Z"></path>
+                      </svg>
+                </div>
+
+                <!-- PLay Pause -->
+                <div>
+                    <i onclick="playPause()" id="ctrlIcon" class="bi bi-play-fill"></i>
+                    <!-- <img src="music/pause.png" id="ctrlIcon"> -->
+                </div>
+                <div>
+                    <svg width="26" height="26" fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m13.314 12.074-4.95-4.95A1 1 0 0 1 9.778 5.71l5.657 5.657a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 0 1-1.414-1.414l4.95-4.95Z"></path>
+                      </svg>
+                </div>
+            </div>
+            </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>

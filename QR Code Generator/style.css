@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--f3-font);
+    user-select: none;
+}
+:root {
+    --main-bg: #eb5e28;
+    /* --main-bg: #C9D6FF; */
+    /* --main-bg:  #0cebeb; */
+    /* --main-bg: */
+    --first: #252422;
+    --second: #403d39;
+    --thrird: #CCC5B9;
+    --fourth: #FFFCF2;
+    --gen-pad: 10px 20px;
+    --f1-font: "Roboto", sans-serif;
+    --f2-font: "Lato", sans-serif;
+    --f3-font: "Poppins", sans-serif;
+}
+body {
+    /* font-family: var(--f3-font); */
+    background: var(--main-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-name {
+    color: var(--main-bg);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.main-box {
+    width: 50%;
+    height: 40%;
+    border-radius: 5px;
+    margin-top: 5%;
+    background: rgba(255, 255, 255, 0.756);
+    /* filter: blur(8px); */
+    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10); */
+    padding: 40px 20px;
+    color: rgb(0, 0, 0);
+}
+input {
+    width: 73%;
+    height: 30px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+    border: 2px solid var(--main-bg);
+}
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 50px;
+    color: white;
+    background: var(--main-bg);
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+    width: 80%;
+    margin: 0 0;
+    cursor: pointer;
+}
+#imgBox {
+    width: 200px;
+    border-radius: 5px;
+    min-height: 0;
+    overflow: hidden;
+    transition: linear 1.5s;
+}
+#imgBox img {
+    width: 100%;
+    padding: 2px 0;
+}
+#imgBox.show-img {
+    max-height: 300px;
+    margin: 10px;
+    border: 1px solid #d1d1d1;
+    border: 2px solid var(--main-bg);
+
+}
+.error {
+    text-align: left;
+    margin: 15px 10px;
+    font-size: 12px;
+    color: grey;
+    transition: none;
+}
+@media only screen and (max-width: 800px) {
+    .main-box {
+    margin-top: 40%;
+    width: 80%;
+    }
+    h1 {
+        font-size: 15px;
+        margin: 10px 0;
+    }
+    input {
+        width: 70%;
+    }
+    button {
+        width: 85%;
+        font-size: 12px;
+        margin: 0;
+    }
+}

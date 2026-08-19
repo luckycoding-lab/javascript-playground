@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Key Action</title>
+</head>
+<body>
+    <input type="text" id="inputField" placeholder="Press Enter">
+    <p id="result"></p>
+
+    <script>
+        const inputField = document.getElementById('inputField');
+        const result = document.getElementById('result');
+
+        inputField.addEventListener('keydown', function(event) {
+            // Check if the 'Enter' key was pressed
+            if (event.key === 'Enter') {
+                // Perform an action (example: displaying input)
+                result.textContent = "You pressed Enter. Your input: " + inputField.value;
+                inputField.value = "";  // Clear input field after pressing Enter
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--f3-font);
+    user-select: none;
+    box-sizing: border-box;
+    /* color: #000000; */
+}
+:root {
+    --main-bg: #59CD90;
+    --a-bg: #3FA7D6;
+    --b-bg: #FAC05E;
+    --c-bg: #F79D84;
+    --d-bg: #EE6352;
+    --gen-pad: 10px 20px;
+    --f1-font: "Roboto", sans-serif;
+    --f2-font: "Lato", sans-serif;
+    --f3-font: "Poppins", sans-serif;
+}
+
+body {
+    background: var(--main-bg);
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(140deg, #F79D84,#3FA7D6);
+    padding: 10px;
+}
+.todoapp {
+    width: 80%;
+    /* max-width: 540px; */
+    height: min-content;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.todoapp h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.todoapp img {
+    width: 40px;
+    transform: rotate(15deg);
+    padding: 10px 10px;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+.row input {
+    flex: 1;
+    border: 0;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+.row button {
+    border: 0;
+    outline: none;
+    padding: 16px 50px;
+    color: #fff;
+    background: var(--a-bg);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background-image: url(circle-filled.png);
+    background-size: contain;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before {
+    background-image: url(check.png);
+}
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover {
+    background: #edeef0;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        width: 100%;
+        min-height: 100vh;
+        /* background: linear-gradient(140deg, #555,#FAC05E); */
+        padding: 10px;
+    }
+    .todoapp {
+        width: 99%;
+    }
+    .todoapp h2 {
+        font-size: 72px;
+    }
+    .todoapp img {
+        width: 90px;
+    }
+    .row {
+        height: 140px;
+    }
+    .row input {
+        font-size: 30px;
+        padding: 10px 15px;
+    }
+    .row button {
+        font-size: 40px;
+        padding: auto 100px;
+        height: 100%;
+    }
+    ul li {
+        font-size: 38px;
+    }
+    ul li::before {
+        top: 28px;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {}

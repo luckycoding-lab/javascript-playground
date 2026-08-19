@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Show n Hide</title>
+    <link rel="shortcut icon" href="https://png.pngtree.com/png-vector/20190917/ourmid/pngtree-circle-password-icon-vectors-png-image_1738057.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Lucky Password</h2>
+    <div class="inputbtn">
+        <input type="password" name="" id="password" placeholder="Enter Your Password Here">
+        <img src="eye-close.png" id="eyeicon">
+    </div>
+    <script>
+        let eye = document.getElementById("eyeicon");
+        let password = document.getElementById("password");
+    
+        eye.onclick = function(){
+            if(password.type == "password"){
+                password.type = "text";
+                eye.src = "eye.png";
+            }else {
+                password.type = "password";
+                eye.src = "eye-close.png";
+            }
+        }
+    </script>
+</body>
+</html>

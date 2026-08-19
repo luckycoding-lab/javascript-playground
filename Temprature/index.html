@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temprature Calculate \ Main </title>
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdUx1vkBvMnFWbXq5jan5zqV6sQtYISPe6Gg&s" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="tempCalc" class="main" onsubmit="calculateTemp(); return false">
+        <h2>Please Enter the Temprature you'd like to Convert.</h2>
+            <input type="number" name="temp" id="temp" placeholder="Ex.1,2,45">
+            <select name="temp_diff" id="temp_diff">
+                <option value="cel">°Celsius</option>
+                <option value="feh">°Fahrenheit</option>
+            </select>
+            <br>
+            <input class="button" type="submit" name="temp"></input>
+            <br>
+            <br>
+            <span id="resultContainer"></span>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

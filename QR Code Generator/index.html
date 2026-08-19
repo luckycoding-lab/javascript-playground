@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR-Code Generator</title>
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-box">
+        <h1 class="main-name">Lucky QR &nbsp; 
+            <svg width="25" height="25" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 20h3a2 2 0 0 0 2-2v-3a1 1 0 0 1 2 0v3a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4v-3a1 1 0 1 1 2 0v3a2 2 0 0 0 2 2h3a1 1 0 0 1 0 2h6a1 1 0 0 1 0-2ZM4 9a1 1 0 0 1-2 0V6a4 4 0 0 1 4-4h3a1 1 0 0 1 0 2H6a2 2 0 0 0-2 2v3Zm16 0V6a2 2 0 0 0-2-2h-3a1 1 0 1 1 0-2h3a4 4 0 0 1 4 4v3a1 1 0 0 1-2 0Z"></path>
+          </svg></h1>
+        <h1>Enter Your Link or Text Here:</h1>
+        <input type="text" name="" id="qrtext" placeholder="Enter Your link or Text Here">
+        <div id="imgBox">
+            <!-- Image Qr Shown  Here -->
+            <img src="" alt="" id="qrImage">
+        </div>
+        <button onclick="GenerateQR()" type="button">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.125 15.75h-3a.375.375 0 0 0-.375.375v3c0 .207.168.375.375.375h3a.375.375 0 0 0 .375-.375v-3a.375.375 0 0 0-.375-.375Z"></path>
+                <path d="M15.375 12.75h-2.25a.375.375 0 0 0-.375.375v2.25c0 .207.168.375.375.375h2.25a.375.375 0 0 0 .375-.375v-2.25a.375.375 0 0 0-.375-.375Z"></path>
+                <path d="M22.125 19.5h-2.25a.375.375 0 0 0-.375.375v2.25c0 .207.168.375.375.375h2.25a.375.375 0 0 0 .375-.375v-2.25a.375.375 0 0 0-.375-.375Z"></path>
+                <path d="M22.125 12.75h-1.5a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375h1.5a.375.375 0 0 0 .375-.375v-1.5a.375.375 0 0 0-.375-.375Z"></path>
+                <path d="M14.625 20.25h-1.5a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375h1.5a.375.375 0 0 0 .375-.375v-1.5a.375.375 0 0 0-.375-.375Z"></path>
+                <path d="M21 1.5h-6.75a1.5 1.5 0 0 0-1.5 1.5v6.75a1.5 1.5 0 0 0 1.5 1.5H21a1.5 1.5 0 0 0 1.5-1.5V3A1.5 1.5 0 0 0 21 1.5Zm-1.5 6.375a.375.375 0 0 1-.375.375h-3a.375.375 0 0 1-.375-.375v-3a.375.375 0 0 1 .375-.375h3a.375.375 0 0 1 .375.375v3Z"></path>
+                <path d="M9.75 1.5H3A1.5 1.5 0 0 0 1.5 3v6.75a1.5 1.5 0 0 0 1.5 1.5h6.75a1.5 1.5 0 0 0 1.5-1.5V3a1.5 1.5 0 0 0-1.5-1.5Zm-1.5 6.375a.375.375 0 0 1-.375.375h-3a.375.375 0 0 1-.375-.375v-3a.375.375 0 0 1 .375-.375h3a.375.375 0 0 1 .375.375v3Z"></path>
+                <path d="M9.75 12.75H3a1.5 1.5 0 0 0-1.5 1.5V21A1.5 1.5 0 0 0 3 22.5h6.75a1.5 1.5 0 0 0 1.5-1.5v-6.75a1.5 1.5 0 0 0-1.5-1.5Zm-1.5 6.375a.375.375 0 0 1-.375.375h-3a.375.375 0 0 1-.375-.375v-3a.375.375 0 0 1 .375-.375h3a.375.375 0 0 1 .375.375v3Z"></path>
+              </svg>
+            &nbsp; Generat Qr Code</button>
+    </div>
+    <script>
+        let imgBox = document.getElementById("imgBox");
+        let imgQR = document.getElementById("qrImage");
+        let QRtext = document.getElementById("qrtext");
+        function GenerateQR() {
+            if(QRtext.value.length > 0 ) {
+                imgQR.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + QRtext.value;
+                imgBox.classList.add("show-img");
+            } else {
+                imgBox.classList.add("error");
+                imgBox.innerHTML = "Enter Your Link Please in the box";
+            }
+        }
+    </script>
+</body>
+</html>

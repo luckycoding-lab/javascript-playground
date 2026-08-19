@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folder Reader</title>
+</head>
+<body>
+    <input type="file" id="fileInput" webkitdirectory multiple />
+    <div id="folderInfo"></div>
+
+    <script>
+        const fileInput = document.getElementById("fileInput");
+        const folderInfo = document.getElementById("folderInfo");
+
+        fileInput.addEventListener("change", () => {
+            const files = fileInput.files;
+            let folderCount = 0;
+            let fileCount = 0;
+
+            // Iterate over the selected files
+            for (const file of files) {
+                if (file.webkitRelativePath) {
+                    // File path includes directory info
+                    const pathParts = file.webkitRelativePath.split('/');
+                    // Count unique folders
+                    folderCount = Math.max(folderCount, pathParts.length - 1);
+                }
+                fileCount++;
+            }
+
+            // Display results
+            folderInfo.innerHTML = `Number of folders: ${folderCount}<br>Number of files: ${fileCount}`;
+        });
+    </script>
+</body>
+</html>

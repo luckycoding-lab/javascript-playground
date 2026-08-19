@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", system-ui;
+}
+body {
+    background: linear-gradient(to right, #f3904f, #3b4371);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+h2 {
+    margin: 5px;
+}
+.main {
+    /* background: linear-gradient(170deg, #67B26F,#67B26F,#67B26F, #4ca2cd); */
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.134);
+    backdrop-filter: blur(10px);
+    /* height: 300px; */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.37);
+    text-align: center;
+    padding: 100px 30px;
+    color: white;
+    border-radius: 10px;
+}
+input {
+    color: #f3904f;
+    padding: 10px 0px;
+    width: 150px;
+    border: none;
+}
+input::placeholder {
+    padding: 10px;
+}
+select {
+    width: 150px;
+    padding: 10px 0px;
+    background-color: #000000f3;
+    color: white;
+}
+.button {
+    width: 310px;
+    padding: 10px 0px;
+    background-color: #000000f3;
+    color: white;
+    border: none;
+    margin: 10px;
+}
+span {
+    /* border: 10px dashed; */
+    margin-top: 50px;
+    /* border: 2px solid white; */
+    padding: 10px 50px;
+    text-align: left;
+    width: 320px;
+    font-size: 32px;
+}

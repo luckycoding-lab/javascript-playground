@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="shortcut icon" href="https://img.icons8.com/office/40/form.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <span class="logo">
+                <img width="35" height="35" src="icons8-logo-96.png" alt="logo"/></span>
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your name" id="contact-name" onkeyup="validateName()">
+                <span id="nameerror"></span>
+            </div>
+            <div class="input-group">
+                <label>Phone no.</label>
+                <input type="tel" placeholder="123 456 789" id="validatePhone" onkeyup="validatePhoneno()">
+                <span id="phoneError"></span>
+            </div>
+            <div class="input-group">
+                <label>Email Id</label>
+                <input type="email" placeholder="Enter your email address" id="validEmail" onkeyup="validatEmail()">
+                <span id="emailerror"></span>
+            </div>
+            <div class="input-group">
+                <label>Your Message</label>
+                <textarea placeholder="Enter Your Message" id="contact-msg" rows="5" onkeyup="validmsg()"></textarea>
+                <span id="msgerrorr"></span>
+            </div>
+            <button type="submit" onclick="return validdateform()">Submit</button>
+            <span id="suberror"></span>
+        </form>
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

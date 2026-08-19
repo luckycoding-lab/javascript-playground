@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--f4-font);
+    user-select: none;
+    box-sizing: border-box;
+    /* color: #000000; */
+}
+:root {
+    --main-bg: #FFD166;
+    --a-bg: #06D6A0;
+    --b-bg: #EF476F;
+    --c-bg: #2274A5;
+    --d-bg: #FFFCF9;
+    --gen-pad: 10px 20px;
+    --f1-font: "Roboto", sans-serif;
+    --f2-font: "Lato", sans-serif;
+    --f3-font: "Poppins", sans-serif;
+    --f4-font: "Bebas Neue", sans-serif;
+}
+
+body {
+    background: var(--main-bg);
+}
+
+.quote-box {
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: auto;
+    padding: 40px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+.quote-box h2 {
+    font-size: 38px;
+    margin-bottom: 40px;
+    position: relative;
+}
+.quote-box h2::after {
+    content: '';
+    width: 10%;
+    height: 4px;
+    border-radius: 3px;
+    background: var(--b-bg);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.quote-box blockquote {
+    font-size: 26px;
+    min-height: 110px;
+}
+.quote-box blockquote::after, .quote-box blockquote::before {
+    content: '"';
+}
+.quote-box span {
+    display: block;
+    margin-top: -10px;
+    float: right;
+    position: relative;
+}
+.quote-box span::after {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: var(--b-bg);
+    position: absolute;
+    top: 50%;
+    left: -30px;
+}
+.quote-box div {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.quote-box button {
+    background: var(--main-bg);
+    color: #000000;
+    border-radius: 25px;
+    border: 3px solid var(--b-bg);
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+    transition-duration: 3s none;
+}
+.quote-box button:active{
+    background: var(--main-bg);
+}
+.quote-box button:nth-child(2) {
+    background: transparent;
+}
+@media only screen and (max-width: 600px) {
+    :root {
+        --main-bg: #04A777;
+        --b-bg: #000000;
+    }
+    .quote-box {
+        width: 90%;
+        border-radius: 5px;
+    }
+    .quote-box h2::after {
+        width: 40%;
+    }
+    .quote-box button {
+        user-select: none;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    :root {
+        --main-bg: #FB8B24;
+        --b-bg: #000000;
+    }
+    .quote-box {
+        width: 90%;
+    }
+}

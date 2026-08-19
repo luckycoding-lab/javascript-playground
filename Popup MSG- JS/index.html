@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Up - Window</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2815/2815428.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button type="submit" class="btn" onclick="openPopup()">Submit</button>
+        <div class="popup" id="popup">
+            <svg width="40" height="40" fill="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.486 16.727a.998.998 0 0 1-.707-.291l-4.242-4.243a1 1 0 1 1 1.413-1.415l3.535 3.534L16.85 7.95a1 1 0 0 1 1.415 1.414l-7.072 7.073a.998.998 0 0 1-.707.291Z"></path>
+              </svg>
+              <h2>Thank You!</h2>
+              <p>Your Details has been Succesfully submit. Thanks!</p>
+              <button type="button" onclick="closePopup()">Done</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
